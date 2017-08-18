@@ -7,17 +7,21 @@
 </head>
 <body>
 <div class="title">IMEI</div>
-<form action="/" method="POST">
-	<input name="imei" type="text" value="{{imei}}" />
+<form action="./" method="POST">
+	<input name="imei" type="text" value="{{imei}}"  onClick="this.select();" />
 	<input name="generate" type="submit" value="Generate" />	
 </form>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 	<input type="hidden" name="cmd" value="_s-xclick">
-	<input type="hidden" name="hosted_button_id" value="F9THSZABAW2ZN">
-	<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_donate_92x26.png" border="0" align="middle" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<input type="hidden" name="hosted_button_id" value="CF28TBSQ56FUW">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td><input type="image" src="../static/btn_donate_92x26.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></td>
+			<td>&nbsp;</td>			
+			<td>Donate USD $1 to help me maintaining this website and adding more tools.</td>
+		</tr>
+	</table>
 	<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-	Your donation will help me maintaining this website.	
 </form>
-
 </body>
 </html>
